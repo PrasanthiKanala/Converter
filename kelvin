@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>Kelvin Converter</title>
+<style>
+	
+		div
+		{
+			background-image:url("temp.jpg");
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:100%;
+			padding: 200px;
+			border-style:double;
+			border-color:yellow;
+			color:white;
+			font-size:35px;
+			
+		}
+		
+		.placeholder{
+			text-align: center;
+			font-size: 25px;
+			padding: 10px;
+			width: 200px;
+		}
+		a{
+			color : white
+		}
+</style>
+</head>
+<body>
+<form>
+<div>
+<script type="text/javascript">
+
+function kConv(valNum){
+	
+	document.getElementById("c").innerHTML= (valNum*(1)-273.15)+"&degC";
+	document.getElementById("f").innerHTML= (((valNum*(1)-273.15)*(9/5))+32)+"&degF";
+}
+</script>
+<form>
+<div><h1 align='center'>Kelvin Converter</h1><br/><br/>
+<p><label id="L1">Kelvin:</label>
+<input class="placeholder" id="inputFeet" type="number" placeholder="Kelvin" oninput="kConv(this.value)">
+</p>
+<p>Celsius:  <span id="c"></span></p>
+<p>Fahrenheit: <span id="f"></span></p>
+<br/><center><a href="Convert.html" >Goto MainPage</a></center>
+</div>
+</form>
+</body>
+</html>
